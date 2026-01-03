@@ -1,0 +1,21 @@
+# ADR-006: Cost Governance und Cost Transparency
+
+**Status:** Accepted
+
+## Context
+Ohne klare Zuordnung von Cloud-Kosten zu Teams oder Workloads fehlt die Transparenz über Kostenverursacher. Dies erschwert Budgetkontrolle, Kostenoptimierung und verantwortungsbewussten Ressourceneinsatz.
+
+## Decision
+Die Architektur setzt auf Cost Governance durch Subscription-Grenzen, konsistentes Tagging und zentrales Kostenmonitoring.
+
+## Rationale
+Klare Kostenstrukturen schaffen Ownership, ermöglichen frühzeitige Erkennung von Kostenabweichungen und unterstützen eine wirtschaftliche Nutzung von Cloud-Ressourcen.
+
+## Alternatives
+- Zentrale Kostenverantwortung ohne Team-Zuordnung  
+- Nachträgliche Kostenanalyse ohne strukturierte Zuordnung  
+
+## Consequences
+- Transparente Kosten pro Team und Workload  
+- Verbesserte Budgetsteuerung  
+- Zusätzlicher Aufwand für Tagging- und Budget-Definition
