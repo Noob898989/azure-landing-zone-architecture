@@ -48,3 +48,54 @@ Die folgenden Qualitätsziele leiten alle Architekturentscheidungen:
 - Vorhersehbare Kosten durch Subscription-Grenzen
 - Monitoring und Alerts für Kostenabweichungen
 - Vermeidung unkontrollierter Ressourcenerstellung
+
+## 3. Stakeholder und Rollen
+
+### Business Stakeholder
+Vertreter der Fachbereiche, die Cloud-Services nutzen, um fachliche Anforderungen umzusetzen.
+
+**Interessen:**
+- Schnelle Bereitstellung von Cloud-Services
+- Hohe Verfügbarkeit und Zuverlässigkeit
+- Transparente Kosten
+
+---
+
+### Cloud Governance Team
+Zentrales Team zur Definition und Durchsetzung von Governance-, Security- und Compliance-Vorgaben.
+
+**Verantwortlichkeiten:**
+- Definition von Azure Policies
+- Verwaltung von Management Groups und Subscriptions
+- Überwachung der Einhaltung von Compliance-Anforderungen
+
+---
+
+### Cloud Platform Team
+Technisches Team, das die Azure Landing Zone bereitstellt und betreibt.
+
+**Verantwortlichkeiten:**
+- Umsetzung der Architekturvorgaben
+- Betrieb von zentralen Plattform-Services
+- Incident- und Change-Management
+
+---
+
+### Workload Teams
+Applikations- oder Projektteams, die Workloads innerhalb der Landing Zone betreiben.
+
+**Verantwortlichkeiten:**
+- Umsetzung applikationsspezifischer Anforderungen
+- Betrieb der eigenen Ressourcen innerhalb der Subscriptions
+- Einhaltung der definierten Policies und Security-Vorgaben
+
+---
+
+### Cloud Solution Architect
+Rolle mit übergreifender Architekturverantwortung.
+
+**Verantwortlichkeiten:**
+- Definition und Weiterentwicklung der Cloud-Architektur
+- Bewertung von Architekturentscheidungen
+- Abstimmung zwischen Business- und Technik-Stakeholdern
+- Sicherstellung der Einhaltung der Qualitätsziele
