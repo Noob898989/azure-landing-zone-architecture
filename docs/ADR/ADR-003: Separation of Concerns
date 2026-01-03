@@ -1,0 +1,21 @@
+# ADR-003: Separation of Concerns zwischen Plattform, Governance und Workloads
+
+**Status:** Accepted
+
+## Context
+In einer Cloud-Plattform mit mehreren Teams führt eine Vermischung von Infrastruktur-, Governance- und Applikationsverantwortlichkeiten zu unklaren Zuständigkeiten, erhöhtem Risiko und ineffizienten Betriebsprozessen.
+
+## Decision
+Die Architektur trennt klar zwischen Plattform-, Governance- und Workload-Verantwortlichkeiten.
+
+## Rationale
+Durch die klare Trennung von Zuständigkeiten werden Verantwortlichkeiten eindeutig definiert, operative Komplexität reduziert und Sicherheits- sowie Governance-Anforderungen konsistent umgesetzt.
+
+## Alternatives
+- Gemeinsame Verantwortung aller Teams für alle Ebenen  
+- Applikationsteams mit vollständiger Infrastruktur- und Governance-Kontrolle  
+
+## Consequences
+- Klare Rollen und Verantwortlichkeiten  
+- Skalierbare Betriebs- und Governance-Strukturen  
+- Erhöhter initialer Abstimmungsaufwand zwischen Teams
