@@ -1,0 +1,21 @@
+# ADR-002: Policy-driven Governance über Azure Policy
+
+**Status:** Accepted
+
+## Context
+In einer Cloud-Umgebung mit mehreren Teams und Subscriptions ist eine konsistente Einhaltung von Governance- und Compliance-Vorgaben erforderlich. Rein organisatorische Regeln und manuelle Prüfungen sind fehleranfällig und nicht skalierbar.
+
+## Decision
+Governance- und Compliance-Anforderungen werden technisch über Azure Policy durchgesetzt.
+
+## Rationale
+Durch die technische Durchsetzung von Richtlinien werden Fehlkonfigurationen präventiv verhindert. Governance wird dadurch skalierbar, konsistent und unabhängig von individueller Disziplin einzelner Teams.
+
+## Alternatives
+- Governance ausschließlich über Dokumentation und Prozesse  
+- Manuelle Architektur- und Security-Reviews  
+
+## Consequences
+- Einheitliche Einhaltung von Standards über alle Subscriptions  
+- Reduzierter manueller Prüfaufwand  
+- Eingeschränkte Flexibilität, die durch dokumentierte Ausnahmen kompensiert wird
