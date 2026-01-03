@@ -194,3 +194,36 @@ Die Azure Landing Zone besteht aus folgenden Hauptbausteinen:
 - Zentrale Erfassung von Logs und Metriken
 - Nutzung von Azure Monitor und Log Analytics
 - Zentrale Auswertung sicherheitsrelevanter Ereignisse
+
+## 6. Laufzeitsicht (Runtime View)
+
+Die Laufzeitsicht beschreibt typische Abläufe und Interaktionen innerhalb der Azure Landing Zone.
+
+### 6.1 Erstellung einer neuen Workload Subscription
+
+1. Ein Workload Team beantragt eine neue Subscription.
+2. Das Cloud Governance Team prüft den Antrag auf Compliance- und Security-Anforderungen.
+3. Die Subscription wird der passenden Management Group zugeordnet.
+4. Vordefinierte Azure Policies und RBAC-Rollen werden automatisch angewendet.
+5. Die Subscription wird an zentrale Monitoring- und Logging-Services angebunden.
+6. Das Workload Team kann innerhalb der definierten Leitplanken Ressourcen bereitstellen.
+
+---
+
+### 6.2 Bereitstellung eines neuen Workloads
+
+1. Das Workload Team plant die Bereitstellung eines neuen Workloads.
+2. Governance- und Security-Policies validieren die Konfiguration.
+3. Ressourcen werden innerhalb der genehmigten Subscription erstellt.
+4. Monitoring, Logging und Security Alerts werden automatisch aktiviert.
+5. Der Betrieb erfolgt gemäß den definierten Qualitätszielen.
+
+---
+
+### 6.3 Policy-Verletzungen und Governance-Eskalation
+
+1. Eine Azure Policy erkennt eine nicht-konforme Ressource.
+2. Die Erstellung wird blockiert oder als non-compliant markiert.
+3. Das Cloud Governance Team wird informiert.
+4. Korrekturmaßnahmen werden eingeleitet.
+5. Die Konformität wird erneut überprüft.
