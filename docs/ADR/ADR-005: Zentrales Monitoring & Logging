@@ -1,0 +1,21 @@
+# ADR-005: Zentrales Monitoring und Logging
+
+**Status:** Accepted
+
+## Context
+Dezentrales Monitoring durch einzelne Workload-Teams führt zu einer Vielzahl unterschiedlicher Monitoring- und Alert-Kanäle. Dies erschwert die Übersicht, verzögert Reaktionszeiten und erhöht die operative Komplexität.
+
+## Decision
+Die Architektur setzt auf zentrales Monitoring und Logging über Azure Monitor und Log Analytics.
+
+## Rationale
+Ein zentrales Monitoring reduziert die Anzahl der Alert-Kanäle, verbessert die Übersicht über den Gesamtzustand der Plattform und ermöglicht klare Zuständigkeiten bei Sicherheits- und Betriebsereignissen.
+
+## Alternatives
+- Dezentrales Monitoring pro Workload-Team  
+- Unterschiedliche Monitoring-Tools je Applikation  
+
+## Consequences
+- Einheitliche Sicht auf Betriebs- und Security-Zustände  
+- Schnellere Incident-Reaktion  
+- Initialer Aufwand für zentrale Definition von Alerts und Dashboards
