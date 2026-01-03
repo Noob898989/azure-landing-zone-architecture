@@ -259,3 +259,50 @@ Die Verteilungssicht beschreibt die logische und physische Platzierung der Archi
 - Alle Subscriptions senden Logs und Metriken zentral ein.
 - Regionale Ausfälle beeinträchtigen nicht die Governance- und Monitoring-Struktur.
 
+## 8. Querschnittliche Konzepte
+
+### Identity & Access Management
+- Zentrale Identitätsverwaltung über Entra ID
+- Zugriffskontrolle über Role-Based Access Control (RBAC)
+- Trennung von administrativen, operativen und lesenden Rollen
+- Nutzung von Privileged Identity Management (PIM) für erhöhte Rechte
+
+---
+
+### Security
+- Security by Design als Grundprinzip
+- Durchsetzung von Sicherheitsrichtlinien über Azure Policy
+- Zentrale Überwachung sicherheitsrelevanter Ereignisse
+- Nutzung von Microsoft Defender for Cloud
+
+---
+
+### Governance & Compliance
+- Einheitliche Governance-Vorgaben über Management Groups
+- Policy-basierte Kontrolle aller Subscriptions
+- Regelmäßige Überprüfung der Compliance-Reports
+- Dokumentierte Ausnahmeprozesse (Policy Exemptions)
+
+---
+
+### Monitoring & Logging
+- Zentrales Monitoring über Azure Monitor
+- Zentrale Log-Erfassung in Log Analytics
+- Standardisierte Alerts für Security- und Betriebsereignisse
+- Klare Verantwortlichkeiten für Alert-Reaktionen
+
+---
+
+### Cost Management
+- Zentrale Kostenüberwachung über Azure Cost Management
+- Nutzung von Tags zur Kostenverteilung
+- Budget-Definitionen mit Alerting
+- Regelmäßige Kosten-Reviews mit Workload Teams
+
+---
+
+### Backup & Recovery
+- Definition zentraler Backup-Standards
+- Nutzung nativer Azure Backup Services
+- Klare Recovery-Ziele (RPO / RTO) je Workload
+- Regelmäßige Wiederherstellungstests
