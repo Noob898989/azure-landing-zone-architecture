@@ -227,3 +227,35 @@ Die Laufzeitsicht beschreibt typische Abläufe und Interaktionen innerhalb der A
 3. Das Cloud Governance Team wird informiert.
 4. Korrekturmaßnahmen werden eingeleitet.
 5. Die Konformität wird erneut überprüft.
+
+## 7. Verteilungssicht (Deployment View)
+
+Die Verteilungssicht beschreibt die logische und physische Platzierung der Architekturbausteine innerhalb von Microsoft Azure.
+
+### Regionen
+- Zentrale Plattform-Services werden in einer primären Azure Region betrieben.
+- Kritische Services können optional in einer sekundären Region für High Availability vorgesehen werden.
+- Die Auswahl der Regionen erfolgt unter Berücksichtigung von Data Residency und Compliance-Anforderungen.
+
+---
+
+### Management Groups und Subscriptions
+- Die Tenant Root Group bildet die oberste Governance-Ebene.
+- Platform Management Groups enthalten zentrale Subscriptions für Management und Connectivity.
+- Workload Management Groups trennen produktive und nicht-produktive Subscriptions.
+- Jede Subscription ist genau einer Management Group zugeordnet.
+
+---
+
+### Netzwerkverteilung
+- Einsatz einer Hub-and-Spoke Netzwerk-Topologie.
+- Zentrale Netzwerk-Services (z. B. Firewall, VPN, ExpressRoute) befinden sich im Hub.
+- Workload-Spokes sind logisch getrennt und nur kontrolliert mit dem Hub verbunden.
+
+---
+
+### Monitoring und Logging
+- Zentrale Log Analytics Workspace in der Management Subscription.
+- Alle Subscriptions senden Logs und Metriken zentral ein.
+- Regionale Ausfälle beeinträchtigen nicht die Governance- und Monitoring-Struktur.
+
