@@ -1,0 +1,21 @@
+# ADR-004: Strukturierung über Management Groups und Subscriptions
+
+**Status:** Accepted
+
+## Context
+Ohne klare Trennung von Plattform-, Governance- und Workload-Ressourcen entstehen unklare Verantwortlichkeiten, eingeschränkte Governance-Kontrollen und mangelnde Transparenz in Bezug auf Sicherheit und Kosten.
+
+## Decision
+Die Architektur nutzt Azure Management Groups zur hierarchischen Strukturierung und trennt Plattform-, Governance- und Workload-Ressourcen in dedizierte Subscriptions.
+
+## Rationale
+Die Trennung über Subscriptions schafft klare Verantwortlichkeiten, verbessert die Durchsetzbarkeit von Security- und Governance-Vorgaben und ermöglicht transparente Kosten- und Betriebsmodelle.
+
+## Alternatives
+- Betrieb aller Ressourcen in einer gemeinsamen Subscription  
+- Trennung ausschließlich über Resource Groups  
+
+## Consequences
+- Klare Verantwortlichkeiten pro Subscription  
+- Verbesserte Security- und Cost-Governance  
+- Erhöhter initialer Strukturierungsaufwand
