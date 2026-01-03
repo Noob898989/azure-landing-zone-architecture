@@ -1,0 +1,21 @@
+# ADR-001: Zentrale Identitätsverwaltung über Entra ID
+
+**Status:** Accepted
+
+## Context
+In einer Azure-Plattform mit mehreren Subscriptions und unterschiedlichen Workloads ist eine konsistente und sichere Verwaltung von Identitäten erforderlich. Dezentrale oder applikationsspezifische Identitätsmodelle erhöhen die Komplexität, erschweren Governance und sind schwer auditierbar.
+
+## Decision
+Die Architektur nutzt Entra ID als zentrale Identitätsplattform für Benutzer, Services und automatisierte Prozesse.
+
+## Rationale
+Eine zentrale Identitätsverwaltung ermöglicht eine einheitliche Durchsetzung von Sicherheitsrichtlinien, reduziert operative Komplexität und stellt eine klare Nachvollziehbarkeit von Zugriffen sicher.
+
+## Alternatives
+- Applikationsspezifische Benutzerverwaltung  
+- Mehrere voneinander unabhängige Identity Provider  
+
+## Consequences
+- Einheitliche Authentifizierung und Autorisierung über alle Subscriptions  
+- Vereinfachtes Offboarding und zentrale Durchsetzung von MFA und Conditional Access  
+- Abhängigkeit von Entra ID als zentralem Dienst
