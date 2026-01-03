@@ -99,3 +99,49 @@ Rolle mit übergreifender Architekturverantwortung.
 - Bewertung von Architekturentscheidungen
 - Abstimmung zwischen Business- und Technik-Stakeholdern
 - Sicherstellung der Einhaltung der Qualitätsziele
+
+## 4. Lösungsstrategie
+
+Die Lösungsstrategie definiert die grundlegenden Architekturprinzipien und Leitplanken für die Azure Landing Zone.
+
+### Architekturprinzipien
+
+- **Security by Design**  
+  Security-Anforderungen werden von Beginn an in die Architektur integriert und nicht nachträglich ergänzt.
+
+- **Least Privilege Principle**  
+  Zugriffsrechte werden strikt auf das notwendige Minimum beschränkt.
+
+- **Policy-driven Governance**  
+  Governance- und Compliance-Anforderungen werden technisch über Azure Policy durchgesetzt.
+
+- **Separation of Concerns**  
+  Trennung von Plattform-, Governance- und Workload-Verantwortlichkeiten.
+
+- **Standardization over Customization**  
+  Bevorzugung standardisierter Azure-Services und Architektur-Patterns.
+
+---
+
+### Technologie-Strategie
+
+Die Architektur basiert bewusst auf nativen Azure-Services:
+
+- Identity & Access: Entra ID
+- Governance: Azure Management Groups, Azure Policy, RBAC
+- Monitoring: Azure Monitor, Log Analytics
+- Networking: Azure Virtual Network, Network Security Groups
+
+Der Einsatz zusätzlicher Plattformen oder Drittanbieter-Lösungen wird nur nach Architektur-Review bewertet.
+
+---
+
+### Excluded Technologies and Patterns
+
+Folgende Ansätze sind bewusst ausgeschlossen:
+
+- Individuelle Berechtigungsmodelle außerhalb von RBAC
+- Direkte Ressourcenerstellung ohne Policy-Validierung
+- Unkontrollierte Subscription-Erstellung
+- Workloads ohne zentrale Monitoring-Anbindung
+
