@@ -145,3 +145,52 @@ Folgende Ansätze sind bewusst ausgeschlossen:
 - Unkontrollierte Subscription-Erstellung
 - Workloads ohne zentrale Monitoring-Anbindung
 
+## 5. Bausteinsicht (Building Block View)
+
+Die Bausteinsicht beschreibt die strukturellen Hauptkomponenten der Azure Landing Zone sowie deren Verantwortlichkeiten.
+
+### Level 1 – Systemübersicht
+
+Die Azure Landing Zone besteht aus folgenden Hauptbausteinen:
+
+- **Tenant Root Group**  
+  Oberste Management Group zur Durchsetzung globaler Policies.
+
+- **Platform Management Group**  
+  Management Group für zentrale Plattform-Services wie Identity, Networking und Monitoring.
+
+- **Landing Zone Management Group**  
+  Management Group für produktive und nicht-produktive Workload-Subscriptions.
+
+- **Connectivity Subscription**  
+  Zentrale Subscription für Netzwerk-Services (z. B. Virtual Networks, VPN, ExpressRoute).
+
+- **Management Subscription**  
+  Zentrale Subscription für Monitoring, Logging und Security-Services.
+
+- **Workload Subscriptions**  
+  Subscriptions für Applikations- und Fachbereichs-Workloads mit klarer Kosten- und Verantwortlichkeitstrennung.
+
+---
+
+### Level 2 – Plattform-Bausteine
+
+#### Identity & Access
+- Zentrale Identitätsverwaltung über Entra ID
+- Zugriffskontrolle mittels RBAC
+- Trennung von administrativen und operativen Rollen
+
+#### Governance
+- Strukturierung über Management Groups
+- Durchsetzung von Azure Policy
+- Zentrale Richtlinien für Security und Compliance
+
+#### Networking
+- Hub-and-Spoke Netzwerk-Topologie
+- Zentrale Netzwerk-Services in der Connectivity Subscription
+- Kontrollierte Anbindung von Workload-Spokes
+
+#### Monitoring & Logging
+- Zentrale Erfassung von Logs und Metriken
+- Nutzung von Azure Monitor und Log Analytics
+- Zentrale Auswertung sicherheitsrelevanter Ereignisse
