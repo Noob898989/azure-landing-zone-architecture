@@ -1,0 +1,26 @@
+# ADR-009: Zentrales Logging und Monitoring
+
+**Status:** Accepted  
+**Datum:** 2026-01-04  
+
+## Context
+In einer Azure-Plattform mit mehreren Subscriptions und Workloads entstehen Logs und Metriken aus unterschiedlichen Quellen.  
+Ohne zentrale Erfassung und Auswertung sind Betriebszustand, Sicherheitsereignisse und Fehlerursachen nur fragmentiert sichtbar und schwer nachvollziehbar.
+
+## Decision
+Die Architektur setzt auf ein zentrales Logging- und Monitoring-Konzept.  
+Alle produktiven Workloads sind verpflichtend an Azure Monitor und zentrale Log Analytics Workspaces angebunden.  
+Sicherheits- und Betriebsereignisse werden standardisiert erfasst und überwacht.
+
+## Rationale
+Zentrales Logging und Monitoring ermöglichen eine ganzheitliche Sicht auf den Plattform- und Workload-Zustand, unterstützen Incident Response und stellen Auditierbarkeit sicher.  
+Einheitliche Standards reduzieren den operativen Aufwand und verhindern blinde Flecken im Betrieb.
+
+## Alternatives
+- Dezentrale Log-Erfassung pro Workload  
+- Monitoring ausschließlich auf Ressourcen-Ebene ohne zentrale Aggregation  
+
+## Consequences
+- Zusätzliche Kosten für Log-Speicherung  
+- Erhöhter Initialaufwand für Standardisierung  
+- Verbesserte Transparenz, Reaktionsfähigkeit und Betriebssicherheit
