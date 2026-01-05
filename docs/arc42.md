@@ -306,3 +306,39 @@ Die Verteilungssicht beschreibt die logische und physische Platzierung der Archi
 - Nutzung nativer Azure Backup Services
 - Klare Recovery-Ziele (RPO / RTO) je Workload
 - Regelmäßige Wiederherstellungstests
+
+Kapitel 9 – Architekturentscheidungen (finale Struktur)
+
+## 9. Architekturentscheidungen
+
+Die folgenden Architekturentscheidungen dokumentieren zentrale, nicht triviale Entscheidungen der Azure Landing Zone Architektur.
+Sie dienen der Nachvollziehbarkeit, Wiederverwendbarkeit und Auditierbarkeit der Architektur.
+
+Alle Entscheidungen wurden unter Berücksichtigung der definierten Qualitätsziele sowie regulatorischer und organisatorischer Anforderungen getroffen.
+
+9.1 Übersicht der Architekturentscheidungen
+
+### 9.1 Übersicht der Architekturentscheidungen
+
+| ADR-ID  | Titel |                                         
+ADR-001 Zentrale Identität Entra ID
+ADR-002: Policy-driven Governance über Azure Policy
+ADR-003: Separation of Concerns
+ADR-004: Subscription- & Management-Group-Struktur
+ADR-005: Zentrales Monitoring & Logging
+ADR-006: Cost Governance & Cost Transparency
+ADR-009: Zentrales Logging & Monitoring
+ADR-007-network-segmentation.md
+ADR-008-backup-disaster-recovery.md
+ADR-010-workload-isolation-by-criticality.md
+
+9.2 Referenzierung der ADRs
+
+### 9.2 Detaillierte Architekturentscheidungen
+
+Die detaillierte Beschreibung der einzelnen Architekturentscheidungen ist in separaten Architecture Decision Records (ADR) dokumentiert.
+
+Die ADRs befinden sich im Verzeichnis:
+
+/docs/ADR/
+
