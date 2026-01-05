@@ -342,3 +342,123 @@ Die ADRs befinden sich im Verzeichnis:
 
 /docs/ADR/
 
+Kapitel 10 – Qualitätsanforderungen (final)
+
+## 10. Qualitätsanforderungen
+
+Die folgenden Qualitätsanforderungen konkretisieren die in Kapitel 2 definierten Qualitätsziele.
+Sie dienen als Grundlage für Architektur-Reviews, Audits sowie für den Betrieb der Azure Landing Zone.
+
+10.1 Security
+
+### 10.1 Security
+
+- Alle Zugriffe auf Azure-Ressourcen erfolgen ausschließlich über Entra ID.
+- Administrative Berechtigungen werden nur zeitlich begrenzt über Privileged Identity Management (PIM) vergeben.
+- Sicherheitsrelevante Konfigurationen werden durch Azure Policy technisch erzwungen.
+- Sicherheitsereignisse werden zentral erfasst, überwacht und ausgewertet.
+
+10.2 Compliance & Governance
+
+### 10.2 Compliance & Governance
+
+- Alle Subscriptions sind einer definierten Management Group zugeordnet.
+- Abweichungen von Governance-Vorgaben werden automatisch erkannt und dokumentiert.
+- Compliance-Reports stehen zentral und revisionssicher zur Verfügung.
+- Ausnahmegenehmigungen (Policy Exemptions) sind zeitlich begrenzt und dokumentiert.
+
+10.3 Maintainability
+
+### 10.3 Maintainability
+
+- Architektur-Patterns und Standards sind dokumentiert und versioniert.
+- Plattform- und Workload-Verantwortlichkeiten sind klar getrennt.
+- Änderungen an der Plattform erfolgen standardisiert und nachvollziehbar.
+- Operative Komplexität wird durch Wiederverwendung standardisierter Komponenten reduziert.
+
+10.4 Cost Transparency
+
+### 10.4 Cost Transparency
+
+- Kosten werden mindestens auf Subscription-Ebene transparent ausgewiesen.
+- Ressourcen sind verpflichtend mit Kosten-Tags versehen.
+- Budget-Grenzen werden definiert und überwacht.
+- Kostenabweichungen werden frühzeitig erkannt und adressiert.
+
+10.5 Availability & Recovery
+
+### 10.5 Availability & Recovery
+
+- Kritische Plattform-Services sind hochverfügbar ausgelegt.
+- Backup- und Recovery-Konzepte sind je Workload definiert.
+- Recovery-Ziele (RPO / RTO) sind dokumentiert und überprüfbar.
+- Wiederherstellungstests werden regelmäßig durchgeführt.
+
+Kapitel 11 – Risiken & technische Schulden (final)
+
+## 11. Risiken & technische Schulden
+
+Dieses Kapitel beschreibt bekannte Risiken sowie bewusst akzeptierte technische Schulden der Azure Landing Zone Architektur.
+Die Identifikation und Dokumentation dieser Punkte dient der Transparenz und ermöglicht eine gezielte Risikominimierung.
+
+11.1 Security-Risiken
+
+### 11.1 Security-Risiken
+
+- Fehlkonfigurationen in Subscriptions können trotz Policy-Vorgaben auftreten, insbesondere bei temporären Ausnahmegenehmigungen.
+- Fehlende Sensibilisierung von Workload-Teams kann zu unsachgemäßer Nutzung von Berechtigungen führen.
+- Abhängigkeit von Entra ID als zentralem Identitätsdienst stellt einen Single Point of Failure dar.
+
+11.2 Governance- und Compliance-Risiken
+
+### 11.2 Governance- und Compliance-Risiken
+
+- Unvollständige oder verspätete Pflege von Management Group Strukturen kann Governance-Lücken verursachen.
+- Nicht dokumentierte Policy Exemptions erschweren die Auditierbarkeit.
+- Unterschiedliche regulatorische Anforderungen einzelner Workloads erhöhen die Komplexität der Governance.
+
+11.3 Betriebsrisiken
+
+### 11.3 Betriebsrisiken
+
+- Zentrale Plattform-Services stellen eine erhöhte betriebliche Abhängigkeit dar.
+- Fehlende Standardisierung von Betriebsprozessen kann zu inkonsistentem Betrieb führen.
+- Unzureichende Alert-Definitionen können zu verzögerter Reaktion auf Betriebsereignisse führen.
+
+11.4 Kostenrisiken
+
+### 11.4 Kostenrisiken
+
+- Unzureichende Tagging-Disziplin kann die Kostentransparenz beeinträchtigen.
+- Fehlende Kostenverantwortung auf Workload-Ebene kann zu Budgetüberschreitungen führen.
+- Skalierungseffekte einzelner Services können Kosten unerwartet erhöhen.
+
+11.5 Technische Schulden
+
+### 11.5 Technische Schulden
+
+- Einführung einzelner Governance-Mechanismen erfolgt schrittweise und ist initial möglicherweise nicht vollständig umgesetzt.
+- Legacy-Workloads können vorübergehend von definierten Architektur-Standards abweichen.
+- Automatisierungsgrad (Infrastructure as Code) ist nicht für alle Plattform-Komponenten initial umgesetzt.
+
+Kapitel 12 – Glossar (final)
+
+## 12. Glossar
+
+| Begriff | Beschreibung |
+|-------|-------------|
+| Azure Landing Zone | Standardisierte Azure-Grundstruktur zur sicheren und regelkonformen Bereitstellung von Cloud-Workloads. |
+| Entra ID | Zentrale Identitäts- und Zugriffsplattform für Benutzer, Gruppen, Services und Workloads in Azure. |
+| Subscription | Logische Abrechnungseinheit und Sicherheitsgrenze in Azure, in der Ressourcen betrieben werden. |
+| Management Group | Hierarchische Struktur zur zentralen Governance und Policy-Durchsetzung über mehrere Subscriptions hinweg. |
+| Workload | Fachliche oder technische Anwendung inklusive aller zugehörigen Cloud-Ressourcen. |
+| Plattform-Services | Zentrale Dienste zur Bereitstellung von Governance, Security, Netzwerk, Monitoring und Betrieb. |
+| RBAC | Role-Based Access Control zur rollenbasierten Vergabe von Zugriffsrechten auf Azure-Ressourcen. |
+| Azure Policy | Mechanismus zur Durchsetzung von Governance- und Compliance-Vorgaben in Azure. |
+| Hub-and-Spoke | Netzwerkarchitektur mit zentralem Hub und logisch getrennten Spoke-Netzwerken. |
+| Log Analytics | Zentrale Plattform zur Sammlung, Analyse und Auswertung von Logs und Metriken. |
+| PIM | Privileged Identity Management zur zeitlich begrenzten Vergabe administrativer Berechtigungen. |
+| RPO | Recovery Point Objective – maximal tolerierbarer Datenverlust. |
+| RTO | Recovery Time Objective – maximal tolerierbare Wiederherstellungszeit. |
+| ADR | Architecture Decision Record zur Dokumentation von Architekturentscheidungen. |
+
