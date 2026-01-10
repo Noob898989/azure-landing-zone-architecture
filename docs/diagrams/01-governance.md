@@ -1,3 +1,16 @@
+```mermaid
+graph TD
+  ...
+
+👉 **ALLES danach ist wieder normales Markdown**
+
+---
+
+## 🔧 SO FIXT DU ES JETZT (1-Minute-Fix)
+
+### ✅ **KORRIGIERTE VERSION – BITTE 1:1 ÜBERNEHMEN**
+
+```markdown
 # Governance – Azure Landing Zone
 
 Dieses Diagramm zeigt die Governance-Struktur der Azure Landing Zone
@@ -15,8 +28,8 @@ graph TD
     MgmtSub[Management Subscription]
     ConnSub[Connectivity Subscription]
 
-    ProdSub[Workload Subscription – Prod]
-    NonProdSub[Workload Subscription – Non-Prod]
+    ProdSub[Workload Subscription - Prod]
+    NonProdSub[Workload Subscription - Non-Prod]
 
     Tenant --> RootMG
     RootMG --> PlatformMG
@@ -24,40 +37,42 @@ graph TD
 
     PlatformMG --> MgmtSub
     PlatformMG --> ConnSub
+
     WorkloadMG --> ProdSub
     WorkloadMG --> NonProdSub
 
 ---
 
-## **SCHRITT 4 – Commit & Push (3 Minuten)**
+## ⚠️ ZWEI WICHTIGE MERMAID-REGELN (MERKEN!)
 
-- Commit Message:
+### 1️⃣ **Keine Sonderzeichen**
+❌ `–` (Gedankenstrich)  
+❌ `**`  
+❌ Emojis  
 
-- Push nach GitHub
+👉 Verwende:
 
-👉 Öffne die Datei im Browser  
-👉 **Diagramm MUSS sichtbar sein**
-
-Wenn ja: ✅ **alles richtig gemacht**
-
----
-
-# 🧠 WARUM DAS GENAU DAS RICHTIGE IST
-
-Du hast jetzt:
-
-✔ Architektur **visualisiert**  
-✔ Diagramm **versionierbar**  
-✔ **Keine PowerPoint-Hölle**  
-✔ **Interview-tauglich**  
-✔ **Architekturstil auf Senior-Level**
-
-Das ist exakt das, was Cloud-Architekten tun.
+### 2️⃣ **Markdown-Überschriften NIE im Mermaid-Block**
+Alles was mit `#` beginnt → **außerhalb** des Diagramms.
 
 ---
 
-# 🔥 SCHRITT 5 – DANACH (sag mir dann einfach „weiter“)  
+## ✅ WENN ES JETZT SICHTBAR IST …
 
-Dann machen wir **nacheinander**:
+Dann hast du:
 
-### 2️⃣ Netzwerk Hub & Spoke  
+✔ GitHub-fähige Architekturdiagramme  
+✔ IaC-Denke für Architektur  
+✔ Interview-taugliche Artefakte  
+✔ Senior-Level Vorgehen
+
+---
+
+## 🔥 NÄCHSTER SCHRITT (ich bin bereit)
+
+👉 Antworte mit **einem** der folgenden Wörter:
+
+- **„Governance-Diagramm sichtbar“**
+- **„Noch Fehler“**
+
+Danach machen wir **Netzwerk Hub-&-Spoke** (noch besser 😎).
