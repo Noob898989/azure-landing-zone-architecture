@@ -1,4 +1,4 @@
-    Backup & Recovery Architecture
+Backup & Recovery Architecture
 
 ```mermaid
 graph TD
