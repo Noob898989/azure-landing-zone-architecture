@@ -1,0 +1,17 @@
+Erstelle ein Mermaid-Diagramm für eine Azure Hub-and-Spoke Netzwerkarchitektur.
+
+Elemente:
+- Zentrales Hub VNET
+- Azure Firewall im Hub
+- VPN Gateway / ExpressRoute Gateway im Hub
+- Mehrere Spoke VNETs
+- Spoke VNETs für:
+  - Prod Workloads
+  - Non-Prod Workloads
+- Spokes dürfen nur über das Hub kommunizieren
+- Keine direkte Spoke-zu-Spoke-Kommunikation
+
+Darstellung:
+- Hub zentral
+- Spokes sternförmig angebunden
+- Klare Beschriftung aller Komponenten
