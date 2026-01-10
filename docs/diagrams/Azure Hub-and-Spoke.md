@@ -1,5 +1,7 @@
+%% Azure Hub-and-Spoke Network Architecture
+
 graph TD
-    %% Azure Hub-and-Spoke Network Architecture
+    
 
     HubVNET[Hub VNET]
 
