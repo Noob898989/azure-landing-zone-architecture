@@ -24,7 +24,6 @@ graph TD
 
     PlatformMG --> MgmtSub
     PlatformMG --> ConnSub
-
     WorkloadMG --> ProdSub
     WorkloadMG --> NonProdSub
 
