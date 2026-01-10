@@ -1,6 +1,6 @@
 Identity & Access Architecture
 
-
+```mermaid
 graph TD
   
     EntraID[Entra ID Tenant]
