@@ -1,6 +1,6 @@
 Monitoring & Logging Architecture
 
-´´´
+```mermaid
 graph TD
   
 
