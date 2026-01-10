@@ -1,5 +1,6 @@
-%% Azure Hub-and-Spoke Network Architecture
+Azure Hub-and-Spoke Network Architecture
 
+```mermaid
 graph TD
     
 
